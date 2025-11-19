@@ -1,0 +1,53 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 36,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/cpustats"],
+  "modules-right": ["network", "pulseaudio", "battery", "clock", "tray"],
+
+  "hyprland/workspaces": {
+    "format": "{name}",
+    "active-only": false,
+    "format-icons": {
+      "1": "󰋜",
+      "2": "󰍛",
+      "3": "󰐔"
+    }
+  },
+
+  "custom/cpustats": {
+    "exec": "~/.config/waybar/scripts/metrics.sh",
+    "interval": 5,
+    "tooltip": false
+  },
+
+  "network": {
+    "format": "{ifname}  {bandwidthDownBits}↓ {bandwidthUpBits}↑",
+    "tooltip": true
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰖁",
+    "format-icons": {
+      "default": ["󰕿", "󰖀", "󰕾"]
+    }
+  },
+
+  "battery": {
+    "format": "{icon} {capacity}%",
+    "format-icons": ["󰁺","󰁻","󰁼","󰁽","󰁾","󰁿","󰂀","󰂁","󰂂","󰁹"],
+    "tooltip": true
+  },
+
+  "clock": {
+    "format": " %H:%M",
+    "interval": 60
+  },
+
+  "tray": {
+    "icon-size": 18,
+    "spacing": 6
+  }
+}
